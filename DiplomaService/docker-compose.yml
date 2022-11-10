@@ -1,0 +1,10 @@
+﻿version: "3"
+
+services:
+  main:
+    build:
+      context: .
+      
+    ports:
+      - "4567:443"
+      - "4566:80"
