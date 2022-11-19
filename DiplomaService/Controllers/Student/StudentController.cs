@@ -14,10 +14,14 @@ namespace DiplomaService.Controllers.Student;
 public class StudentController : Controller
 {
     private readonly IStudentAsyncRepository _studentAsyncRepository;
+    private readonly ILogger<StudentController> _logger;
 
-    public StudentController(IStudentAsyncRepository studentAsyncRepository)
+    public StudentController(IStudentAsyncRepository studentAsyncRepository, ILogger<StudentController> logger)
     {
         _studentAsyncRepository = studentAsyncRepository;
+        _logger = logger;
+        
+        logger.LogDebug("Логер инициализирован в контроллере {Name}", nameof(StudentController));
     }
     
     /// <summary>
@@ -80,8 +84,9 @@ public class StudentController : Controller
         {
             await _studentAsyncRepository.Delete(guid);
         }
-        catch (ArgumentException)
+        catch (ArgumentException e)
         {
+            _logger.LogError(e, e.Message);
             return NotFound();
         }
 

@@ -14,10 +14,14 @@ namespace DiplomaService.Controllers.Project;
 public class ProjectController : Controller
 {
     private readonly IProjectAsyncRepository _projectAsyncRepository;
+    private readonly ILogger<ProjectController> _logger;
 
-    public ProjectController(IProjectAsyncRepository projectAsyncRepository)
+    public ProjectController(IProjectAsyncRepository projectAsyncRepository, ILogger<ProjectController> logger)
     {
         _projectAsyncRepository = projectAsyncRepository;
+        _logger = logger;
+        
+        logger.LogDebug("Логер инициализирован в контроллере {Name}", nameof(ProjectController));
     }
     
     /// <summary>
@@ -80,8 +84,9 @@ public class ProjectController : Controller
         {
             await _projectAsyncRepository.Delete(guid);
         }
-        catch (ArgumentException)
+        catch (ArgumentException e)
         {
+            _logger.LogError(e, e.Message);
             return NotFound();
         }
 
