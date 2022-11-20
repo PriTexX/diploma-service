@@ -2,6 +2,7 @@
 using System.Security.Cryptography;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using DiplomaService.Controllers;
 using DiplomaService.Database;
 using DiplomaService.Repositories.Implementations;
 using DiplomaService.Repositories.Interfaces;
@@ -50,6 +51,8 @@ public class Startup
         services.AddDbContext<StudentsContext>(options => 
             options.UseInMemoryDatabase("TestDatabase"));
 
+        services.AddSingleton<IResponseHandler, ResponseHandler>();
+        
         services.AddTransient<IStudentAsyncRepository, StudentAsyncRepository>();
         services.AddTransient<IProfessorAsyncRepository, ProfessorAsyncRepository>();
         services.AddTransient<IProjectAsyncRepository, ProjectAsyncRepository>();

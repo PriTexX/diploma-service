@@ -14,10 +14,12 @@ namespace DiplomaService.Controllers.Project;
 public class ProjectController : Controller
 {
     private readonly IProjectAsyncRepository _projectAsyncRepository;
+    private readonly IResponseHandler _responseHandler;
 
-    public ProjectController(IProjectAsyncRepository projectAsyncRepository)
+    public ProjectController(IProjectAsyncRepository projectAsyncRepository, IResponseHandler responseHandler)
     {
         _projectAsyncRepository = projectAsyncRepository;
+        _responseHandler = responseHandler;
     }
     
     /// <summary>
@@ -41,7 +43,7 @@ public class ProjectController : Controller
             data.HasPrevious
         };
         
-        Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(metadata));
+        _responseHandler.AddHeader(Response,"X-Pagination", metadata);
         
         return new ObjectResult(data.Select(ProjectResponseModel.ToResponseModel));
     }
