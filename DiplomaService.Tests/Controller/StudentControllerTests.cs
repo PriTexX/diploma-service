@@ -1,33 +1,37 @@
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using DiplomaService.Controllers.Student;
 using DiplomaService.Database;
 using DiplomaService.PaginationExtensions;
 using DiplomaService.Repositories.Interfaces;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Xunit;
+using Xunit.Abstractions;
 
-namespace DiplomaService.Tests;
+namespace DiplomaService.Tests.Controller;
 
 public class StudentControllerTests
 {
-    [Fact]
-    public async Task GetAllStudentsReturnsAllStudents()
+    private readonly ITestOutputHelper _testOutputHelper;
+    private readonly Mock<IStudentAsyncRepository> _mockRepo;
+
+    public StudentControllerTests(ITestOutputHelper testOutputHelper, Mock<IStudentAsyncRepository> mockRepo)
     {
-        const int page = 1;
-        const int pageSize = 2;
+        _testOutputHelper = testOutputHelper;
+        _mockRepo = mockRepo;
+    }
+
+    [Theory]
+    [InlineData(1,2)]
+    public async Task GetStudents_GetsAllStudents_ReturnsAllStudents( int page, int pageSize)
+    {
+        _mockRepo.Setup(repo => repo.GetAll(page, pageSize)).Returns(Task.FromResult(GetTestStudents(page, pageSize)));
         
-        var mock = new Mock<IStudentAsyncRepository>();
-        mock.Setup(repo => repo.GetAll(page, pageSize)).Returns(Task.FromResult(GetTestStudents(page, pageSize)));
-        
-        var controller = new StudentController(mock.Object);
-        controller.Response = ;
-        
-        var data = await mock.Object.GetAll(page, pageSize);
+        var controller = new StudentController(_mockRepo.Object);
+
+        var data = await _mockRepo.Object.GetAll(page, pageSize);
 
         var result = await controller.GetStudents(new PaginationQuery{Page = page, PageSize = pageSize});
 
