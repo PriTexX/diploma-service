@@ -29,4 +29,27 @@ public class StudentResponseModel
             Professor = professor,
         };
     }
+
+    public static bool operator ==(StudentResponseModel studentResponseModel, Database.Student student)
+    {
+        return studentResponseModel.Course == student.Course &&
+               studentResponseModel.Group == student.Group &&
+               studentResponseModel.Guid == student.Guid &&
+               studentResponseModel.FullName == student.FullName;
+    }
+    
+    public static bool operator !=(StudentResponseModel studentResponseModel, Database.Student student)
+    {
+        return !(studentResponseModel == student);
+    }
+
+    public static bool operator ==(Database.Student student, StudentResponseModel studentResponseModel)
+    {
+        return studentResponseModel == student;
+    }
+
+    public static bool operator !=(Database.Student student, StudentResponseModel studentResponseModel)
+    {
+        return studentResponseModel != student;
+    }
 }

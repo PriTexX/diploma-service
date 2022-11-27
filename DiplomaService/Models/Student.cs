@@ -23,4 +23,18 @@ public class Student
             Group = student.Group
         };
     }
+
+    public static bool operator ==(Student current,Student other)
+    {
+        return current.Course == other.Course &&
+               current.Group == other.Group &&
+               current.Guid == other.Guid &&
+               current.FullName == other.FullName &&
+               current.ProjectId == other.ProjectId;
+    }
+
+    public static bool operator !=(Student current, Student other)
+    {
+        return !(current == other);
+    }
 }

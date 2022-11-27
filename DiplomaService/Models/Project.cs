@@ -17,4 +17,17 @@ public class Project
             ProfessorId = project.ProfessorId
         };
     }
+    
+    public static bool operator ==(Project current,Project other)
+    {
+        return current.Name == other.Name &&
+               current.StudentId == other.StudentId &&
+               current.Guid == other.Guid &&
+               current.ProfessorId == other.ProfessorId;
+    }
+
+    public static bool operator !=(Project current, Project other)
+    {
+        return !(current == other);
+    }
 }

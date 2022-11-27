@@ -13,4 +13,15 @@ public class Professor
             FullName = professor.FullName
         };
     }
+    
+    public static bool operator ==(Professor current,Professor other)
+    {
+        return current.Guid == other.Guid &&
+               current.FullName == other.FullName;
+    }
+
+    public static bool operator !=(Professor current, Professor other)
+    {
+        return !(current == other);
+    }
 }
