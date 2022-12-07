@@ -136,7 +136,6 @@ public class StudentControllerTests
     public async Task CreateStudent_ActionFails_ReturnsBadRequest(string guid)
     {
         var newStudent = CreateTestStudent(guid, "211-545", 2, "Stan Stan Stan");
-        var testData = GetTestStudent(guid);
         _mockRepo.Setup(repo => repo.Exists(guid)).Returns(Task.FromResult(true));
         _mockRepo.Setup(repo => repo.Create(newStudent)).Returns(Task.FromResult(newStudent)!);
         

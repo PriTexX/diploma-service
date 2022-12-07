@@ -130,7 +130,6 @@ public class ProfessorControllerTests
     public async Task CreateProfessor_ActionFails_ReturnsBadRequest(string guid)
     {
         var newProfessor = CreateTestProfessor(guid, "Stan Stan Stan");
-        var testData = GetTestProfessor(guid);
         _mockRepo.Setup(repo => repo.Exists(guid)).Returns(Task.FromResult(true));
         _mockRepo.Setup(repo => repo.Create(newProfessor)).Returns(Task.FromResult(newProfessor)!);
         
