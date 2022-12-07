@@ -2,5 +2,13 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f6421873_002D418b_002D41e3_002Db884_002Dd02ec7d14fae/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GetStudents_GetsAllStudents_ReturnsAllStudents" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::7DAE706D-DA66-41C5-A43D-25DC6BA9DAB3::net6.0::DiplomaService.Tests.Controller.StudentControllerTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7DAE706D-DA66-41C5-A43D-25DC6BA9DAB3::net6.0::DiplomaService.Tests.ProfessorControllerTests.GetProfessors_ActionExecutes_ReturnsAllStudents&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7DAE706D-DA66-41C5-A43D-25DC6BA9DAB3::net6.0::DiplomaService.Tests.ProfessorControllerTests.GetStudent_ActionExecutes_ReturnsStudentById&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7DAE706D-DA66-41C5-A43D-25DC6BA9DAB3::net6.0::DiplomaService.Tests.ProfessorControllerTests.GetStudent_ActionFails_ReturnsNotFound&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7DAE706D-DA66-41C5-A43D-25DC6BA9DAB3::net6.0::DiplomaService.Tests.ProfessorControllerTests.DeleteStudent_ActionExecutes_DeletesStudentById&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7DAE706D-DA66-41C5-A43D-25DC6BA9DAB3::net6.0::DiplomaService.Tests.ProfessorControllerTests.UpdateStudent_ActionExecutes_UpdatesStudent&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7DAE706D-DA66-41C5-A43D-25DC6BA9DAB3::net6.0::DiplomaService.Tests.ProfessorControllerTests.UpdateStudent_ActionFails_ReturnsNotFound&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7DAE706D-DA66-41C5-A43D-25DC6BA9DAB3::net6.0::DiplomaService.Tests.ProfessorControllerTests.CreateProfessor_ActionExecutes_CreatesProfessor&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7DAE706D-DA66-41C5-A43D-25DC6BA9DAB3::net6.0::DiplomaService.Tests.ProfessorControllerTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

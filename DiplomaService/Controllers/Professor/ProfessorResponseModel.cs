@@ -24,4 +24,25 @@ public class ProfessorResponseModel
             Projects = projects?.ToList()
         };
     }
+    
+    public static bool operator ==(ProfessorResponseModel professorResponseModel, Database.Professor professor)
+    {
+        return professorResponseModel.Guid == professor.Guid &&
+               professorResponseModel.FullName == professor.FullName;
+    }
+    
+    public static bool operator !=(ProfessorResponseModel studentResponseModel, Database.Professor professor)
+    {
+        return !(studentResponseModel == professor);
+    }
+
+    public static bool operator ==(Database.Professor professor, ProfessorResponseModel professorResponseModel)
+    {
+        return professorResponseModel == professor;
+    }
+
+    public static bool operator !=(Database.Professor professor, ProfessorResponseModel professorResponseModel)
+    {
+        return professorResponseModel != professor;
+    }
 }

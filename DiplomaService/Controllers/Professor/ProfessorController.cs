@@ -122,6 +122,9 @@ public class ProfessorController : Controller
     [HttpPost]
     public async Task<IActionResult> CreateProfessor(Database.Professor professor)
     {
+        if (await _professorAsyncRepository.Exists(professor.Guid))
+            return BadRequest("Professor with such guid already exists");
+        
         await _professorAsyncRepository.Create(professor);
 
         return new CreatedResult(professor.Guid, ProfessorResponseModel.ToResponseModel(professor));

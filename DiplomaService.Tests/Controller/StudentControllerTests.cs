@@ -9,7 +9,6 @@ using DiplomaService.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace DiplomaService.Tests.Controller;
 
