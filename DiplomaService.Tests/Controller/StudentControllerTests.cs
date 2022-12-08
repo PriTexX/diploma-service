@@ -154,6 +154,7 @@ public class StudentControllerTests
             Guid = guid
         };
     }
+    
     private Student GetTestStudent(string guid)
     {
         return new Student()
@@ -164,6 +165,7 @@ public class StudentControllerTests
             Guid = guid
         };
     }
+    
     private PagedList<Student> GetTestStudents(int page, int pageSize)
     {
         var source = new List<Student>

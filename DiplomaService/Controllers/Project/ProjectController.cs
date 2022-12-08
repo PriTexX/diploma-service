@@ -122,6 +122,9 @@ public class ProjectController : Controller
     [HttpPost]
     public async Task<IActionResult> CreateProject(Database.Project project)
     {
+        if (await _projectAsyncRepository.Exists(project.Guid))
+            return BadRequest("Project with such guid already exists");
+        
         await _projectAsyncRepository.Create(project);
 
         return new CreatedResult("", ProjectResponseModel.ToResponseModel(project));

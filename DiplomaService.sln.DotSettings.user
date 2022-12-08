@@ -10,5 +10,15 @@
     &lt;TestId&gt;xUnit::7DAE706D-DA66-41C5-A43D-25DC6BA9DAB3::net6.0::DiplomaService.Tests.ProfessorControllerTests.UpdateStudent_ActionFails_ReturnsNotFound&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::7DAE706D-DA66-41C5-A43D-25DC6BA9DAB3::net6.0::DiplomaService.Tests.ProfessorControllerTests.CreateProfessor_ActionExecutes_CreatesProfessor&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::7DAE706D-DA66-41C5-A43D-25DC6BA9DAB3::net6.0::DiplomaService.Tests.ProfessorControllerTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7DAE706D-DA66-41C5-A43D-25DC6BA9DAB3::net6.0::DiplomaService.Tests.Controller.ProjectControllerTests.GetProjects_ActionExecutes_ReturnsAllProjects&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7DAE706D-DA66-41C5-A43D-25DC6BA9DAB3::net6.0::DiplomaService.Tests.Controller.ProjectControllerTests.GetProject_ActionExecutes_ReturnsProjectById&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7DAE706D-DA66-41C5-A43D-25DC6BA9DAB3::net6.0::DiplomaService.Tests.Controller.ProjectControllerTests.GetProject_ActionFails_ReturnsNotFound&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7DAE706D-DA66-41C5-A43D-25DC6BA9DAB3::net6.0::DiplomaService.Tests.Controller.ProjectControllerTests.DeleteProject_ActionExecutes_DeletesProjectById&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7DAE706D-DA66-41C5-A43D-25DC6BA9DAB3::net6.0::DiplomaService.Tests.Controller.ProjectControllerTests.UpdateProject_ActionExecutes_UpdatesProject&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7DAE706D-DA66-41C5-A43D-25DC6BA9DAB3::net6.0::DiplomaService.Tests.Controller.ProjectControllerTests.UpdateProject_ActionFails_ReturnsNotFound&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7DAE706D-DA66-41C5-A43D-25DC6BA9DAB3::net6.0::DiplomaService.Tests.Controller.ProjectControllerTests.CreateProfessor_ActionExecutes_CreatesProfessor&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7DAE706D-DA66-41C5-A43D-25DC6BA9DAB3::net6.0::DiplomaService.Tests.Controller.ProjectControllerTests.CreateProject_ActionExecutes_CreatesProject&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7DAE706D-DA66-41C5-A43D-25DC6BA9DAB3::net6.0::DiplomaService.Tests.Controller.ProjectControllerTests.CreateProject_ActionFails_ReturnsBadRequest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7DAE706D-DA66-41C5-A43D-25DC6BA9DAB3::net6.0::DiplomaService.Tests.Controller.ProjectControllerTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

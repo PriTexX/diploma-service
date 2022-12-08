@@ -20,4 +20,25 @@ public class ProjectResponseModel
             Professor = project.Professor is not null ? Models.Professor.ToProfessorModel(project.Professor) : null
         };
     }
+    
+    public static bool operator ==(ProjectResponseModel projectResponseModel, Database.Project project)
+    {
+        return projectResponseModel.Guid == project.Guid &&
+               projectResponseModel.Name == project.Name;
+    }
+    
+    public static bool operator !=(ProjectResponseModel projectResponseModel, Database.Project project)
+    {
+        return !(projectResponseModel == project);
+    }
+
+    public static bool operator ==(Database.Project project, ProjectResponseModel projectResponseModel)
+    {
+        return projectResponseModel == project;
+    }
+
+    public static bool operator !=(Database.Project project, ProjectResponseModel projectResponseModel)
+    {
+        return projectResponseModel != project;
+    }
 }

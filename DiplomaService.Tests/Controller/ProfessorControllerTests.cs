@@ -146,6 +146,7 @@ public class ProfessorControllerTests
             Guid = guid
         };
     }
+    
     private Professor GetTestProfessor(string guid)
     {
         return new Professor()
@@ -154,6 +155,7 @@ public class ProfessorControllerTests
             Guid = guid
         };
     }
+    
     private PagedList<Professor> GetTestProfessors(int page, int pageSize)
     {
         var source = new List<Professor>
